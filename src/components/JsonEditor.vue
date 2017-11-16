@@ -7,7 +7,7 @@
 
 import JSONEditor from 'jsoneditor/dist/jsoneditor-minimalist.js'
 import 'jsoneditor/dist/jsoneditor.min.css'
-import _ from 'lodash'
+import _extend from 'lodash/extend'
 
 export default {
   name: 'json-editor',
@@ -49,7 +49,7 @@ export default {
   },
   mounted () {
     const container = this.$refs.jsoneditor
-    const options = _.extend({
+    const options = _extend({
       onChange: this._onChange
     }, this.options)
 
